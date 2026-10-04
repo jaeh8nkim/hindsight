@@ -1,0 +1,29 @@
+# Python 3.10, Linux, CUDA GPUs. Install into a fresh environment (see README):
+#   uv venv --python 3.10 && source .venv/bin/activate
+#   uv pip install -r requirements.txt
+#   uv pip install --no-build-isolation flash-attn==2.8.3
+# The PyPI wheels of torch 2.9.1, sglang, and sgl-kernel use the CUDA 12.8 runtime.
+
+# verl v0.7.0 with this repository's changes, installed in editable mode
+-e ./verl
+
+torch==2.9.1
+sglang[srt,openai]==0.5.6
+sgl-kernel==0.3.18.post2
+flashinfer-python==0.5.3
+torch-memory-saver==0.0.9
+transformers==4.57.1
+tokenizers==0.22.2
+ray[default]==2.54.0
+tensordict==0.10.0
+torchdata==0.11.0
+hydra-core==1.3.2
+omegaconf==2.3.0
+numpy==1.26.4
+pandas==2.3.3
+pyarrow==25.0.0
+datasets==4.8.4
+huggingface-hub==0.36.2
+math-verify==0.9.0
+openai==2.6.1
+python-dotenv==1.2.2
